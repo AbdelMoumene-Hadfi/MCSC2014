@@ -2,7 +2,7 @@
  *   time for interesting stuff  :')
  *   Pwnable500 by Mohamed Ghannam (simo36) MCSC 2014
  *   64-bit executable + NX + ASLR 
- *   Compilation : gcc -o pwn500 pwn500.c -ljson -std=c99 -fno-stack-protector -ggdb -znoexecstack 
+ *   Compilation : gcc -o pwn200 pwn200.c -ljson -std=c99 -fno-stack-protector -ggdb -znoexecstack
 */
 
 #include <stdio.h>
@@ -25,6 +25,7 @@
 
 #define TITLE_SIZE	20
 #define DESC_SIZE	128
+
 
 #define for_each_iface(curr) \
 	for(;(curr);(curr)=(curr)->ifa_next)
@@ -267,9 +268,9 @@ int  parse_request(int fd)
 			ptr = src;
 			dlen=0;
 			
-			/*
+			
 			while (*src) {
-				/* Javasript shellcode ;-) 
+				/* Javasript shellcode ;-) */
 				if(*src == '\\') {
 					*src++;
 					switch(*src) {
@@ -297,7 +298,7 @@ int  parse_request(int fd)
 				else
 					*ptr++ = *src++;
 			}
-			*/
+			
 			if(!strncmp(key,"title",strlen("title"))) {
 				if (~(stat & TITLE_SET)) {
 					tlen = (vlen >= TITLE_SIZE)?TITLE_SET-1:vlen;
@@ -400,4 +401,3 @@ int main(int argc, char **argv)
 	return 0;
 	
 }
-
