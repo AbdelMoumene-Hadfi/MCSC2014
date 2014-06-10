@@ -1,6 +1,6 @@
 /*
  * An introduction to Kernel SLUB heap overflow exploitation 
- * By : simo36 (MCSC 2014) , cheers qnix 
+ * By : simo36 (MCSC 2014) 
  *
  */
 
