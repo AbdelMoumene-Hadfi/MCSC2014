@@ -221,7 +221,6 @@ uint8_t g_data[5000] =
 int main(int argc, char **argv)
 {
 
-	printf("emoo VM layer challenge by Simo36 & Qnix (MCSC 2014) \n");
 	stack = (int32_t *) malloc(sizeof(int32_t) * STACK_MAX);
 	if (!stack) return -1;
 	SHOW_REGS;
