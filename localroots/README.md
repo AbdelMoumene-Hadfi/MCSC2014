@@ -1,4 +1,5 @@
-MCSC2014
+MCSC2014 . localroots
 ========
 
-some challenges I've been wrote for MCSC2014 computer security contest at ENSIAS
+some vulnerable kernels , the challenges should spot the bug and write a localroot exploit
+
